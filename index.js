@@ -1,5 +1,11 @@
 
 /**
+ * Module dependencies.
+ */
+
+var index = require('indexof');
+
+/**
  * Whitespace regexp.
  */
 
@@ -46,7 +52,7 @@ ClassList.prototype.add = function(name){
 
   // fallback
   var arr = this.array();
-  var i = arr.indexOf(name);
+  var i = index(arr, name);
   if (!~i) arr.push(name);
   this.el.className = arr.join(' ');
   return this;
@@ -69,7 +75,7 @@ ClassList.prototype.remove = function(name){
 
   // fallback
   var arr = this.array();
-  var i = arr.indexOf(name);
+  var i = index(arr, name);
   if (~i) arr.splice(i, 1);
   this.el.className = arr.join(' ');
   return this;
@@ -123,5 +129,5 @@ ClassList.prototype.array = function(){
 ClassList.prototype.has = function(name){
   return this.list
     ? this.list.contains(name)
-    : !! ~this.array().indexOf(name);
+    : !! ~index(this.array(), name);
 };
