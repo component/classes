@@ -1,7 +1,7 @@
 
 # classes
 
-  Cross-browser element class manipulation, utilizing the native `.classList` when possible.
+  Cross-browser element class manipulation, utilizing the native `.classList` when possible. This is not designed to be a `.classList` polyfill.
 
 ## Installation
 
