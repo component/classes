@@ -54,7 +54,7 @@ ClassList.prototype.add = function(name){
   var arr = this.array();
   var i = index(arr, name);
   if (!~i) arr.push(name);
-  this.el.className = arr.join(' ');
+  this.setClassName(arr.join(' '));
   return this;
 };
 
@@ -77,7 +77,7 @@ ClassList.prototype.remove = function(name){
   var arr = this.array();
   var i = index(arr, name);
   if (~i) arr.splice(i, 1);
-  this.el.className = arr.join(' ');
+  this.setClassName(arr.join(' '));
   return this;
 };
 
@@ -113,7 +113,7 @@ ClassList.prototype.toggle = function(name){
  */
 
 ClassList.prototype.array = function(){
-  var arr = this.el.className.split(re);
+  var arr = this.getClassName().split(re);
   if ('' === arr[0]) arr.pop();
   return arr;
 };
@@ -130,4 +130,15 @@ ClassList.prototype.has = function(name){
   return this.list
     ? this.list.contains(name)
     : !! ~index(this.array(), name);
+};
+
+ClassList.prototype.getClassName = function(){
+  return (this.el.className instanceof SVGAnimatedString ? this.el.className.baseVal : this.el.className);
+};
+ClassList.prototype.setClassName = function(value){
+  if (this.el.className instanceof SVGAnimatedString) {
+    this.el.setAttribute("class", value);
+  } else {
+    this.el.className = value;
+  }
 };
