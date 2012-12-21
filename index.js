@@ -126,7 +126,8 @@ ClassList.prototype.array = function(){
  * @api public
  */
 
-ClassList.prototype.has = function(name){
+ClassList.prototype.has
+ClassList.prototype.contains = function(name){
   return this.list
     ? this.list.contains(name)
     : !! ~index(this.array(), name);
