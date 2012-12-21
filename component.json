@@ -1,6 +1,6 @@
 {
   "name": "classes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cross-browser element class list",
   "keywords": ["dom", "html", "classList", "class", "ui"],
   "scripts": ["index.js"],
