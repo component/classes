@@ -126,7 +126,7 @@ ClassList.prototype.array = function(){
  * @api public
  */
 
-ClassList.prototype.has
+ClassList.prototype.has =
 ClassList.prototype.contains = function(name){
   return this.list
     ? this.list.contains(name)
