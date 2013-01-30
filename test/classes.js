@@ -43,6 +43,14 @@ describe('classes(el)', function(){
     })
   })
 
+  describe('.remove(regexp)', function(){
+    it('should remove matching classes', function(){
+      el.className = 'foo item-1 item-2 bar';
+      classes(el).remove(/^item-/);
+      assert('foo bar' == el.className);
+    })
+  })
+
   describe('.toggle(class)', function(){
     describe('when present', function(){
       it('should remove the class', function(){

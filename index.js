@@ -12,6 +12,12 @@ var index = require('indexof');
 var re = /\s+/;
 
 /**
+ * toString reference.
+ */
+
+var toString = Object.prototype.toString;
+
+/**
  * Wrap `el` in a `ClassList`.
  *
  * @param {Element} el
@@ -59,14 +65,20 @@ ClassList.prototype.add = function(name){
 };
 
 /**
- * Remove class `name` when present.
+ * Remove class `name` when present, or
+ * pass a regular expression to remove
+ * any which match.
  *
- * @param {String} name
+ * @param {String|RegExp} name
  * @return {ClassList}
  * @api public
  */
 
 ClassList.prototype.remove = function(name){
+  if ('[object RegExp]' == toString.call(name)) {
+    return this.removeMatching(name);
+  }
+
   // classList
   if (this.list) {
     this.list.remove(name);
@@ -78,6 +90,24 @@ ClassList.prototype.remove = function(name){
   var i = index(arr, name);
   if (~i) arr.splice(i, 1);
   this.el.className = arr.join(' ');
+  return this;
+};
+
+/**
+ * Remove all classes matching `re`.
+ *
+ * @param {RegExp} re
+ * @return {ClassList}
+ * @api private
+ */
+
+ClassList.prototype.removeMatching = function(re){
+  var arr = this.array();
+  for (var i = 0; i < arr.length; i++) {
+    if (re.test(arr[i])) {
+      this.remove(arr[i]);
+    }
+  }
   return this;
 };
 

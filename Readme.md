@@ -13,7 +13,10 @@ $ component install component/classes
 
 ```js
 var classes = require('classes');
-classes(el).add('foo').toggle('bar');
+classes(el)
+  .add('foo')
+  .toggle('bar')
+  .remove(/^item-\d+/);
 ```
 
 ## API
@@ -24,7 +27,7 @@ classes(el).add('foo').toggle('bar');
 
 ### .remove(class)
 
-  Remove `class`.
+  Remove `class` name or all classes matching the given regular expression.
 
 ### .toggle(class)
 
@@ -38,6 +41,6 @@ classes(el).add('foo').toggle('bar');
 
   Return an array of classes.
 
-## License 
+## License
 
   MIT
