@@ -2,5 +2,13 @@
   "name": "classes-component",
   "version": "1.0.0",
   "description": "Cross-browser element class list",
-  "keywords": ["dom", "html", "classList", "class", "ui"]
+  "keywords": ["dom", "html", "classList", "class", "ui"],
+  "dependencies": {
+    "indexof-component": "component/indexof"
+  },
+  "component": {
+    "scripts": {
+      "classes/index.js": "index.js"
+    }
+  }
 }
