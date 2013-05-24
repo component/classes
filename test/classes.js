@@ -92,4 +92,19 @@ describe('classes(el)', function(){
       assert(true === classes(el).has('there'));
     })
   })
+
+  describe('.swap(old, new)', function(){
+    it('should remove `old` and add `new`', function(){
+      el.className = 'old';
+      classes(el).swap('old', 'new');
+      assert('new' === el.className);
+    })
+
+    it('should\'t care if `old` doesn\'t exist', function(){
+      el.className = 'foo';
+      classes(el).swap('old', 'new');
+      assert(true === classes(el).has('foo'));
+      assert(false === classes(el).has('old'));
+    })
+  })
 })

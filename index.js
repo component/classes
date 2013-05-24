@@ -162,3 +162,16 @@ ClassList.prototype.contains = function(name){
     ? this.list.contains(name)
     : !! ~index(this.array(), name);
 };
+
+/**
+ * Swap `a` for `b`
+ *
+ * @param {String} a
+ * @param {String} b
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.swap = function(a, b){
+  return this.remove(a).add(b);
+};
