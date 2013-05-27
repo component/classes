@@ -4,7 +4,7 @@
   "description": "Cross-browser element class list",
   "keywords": ["dom", "html", "classList", "class", "ui"],
   "dependencies": {
-    "indexof-component": "component/indexof"
+    "indexof": "component/indexof"
   },
   "component": {
     "scripts": {
