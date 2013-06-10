@@ -1,4 +1,9 @@
 
+1.1.2 / 2013-06-10 
+==================
+
+ * fix leading / trailing whitespace leading to empty string in .array() retval
+
 1.1.0 / 2013-01-30 
 ==================
 
