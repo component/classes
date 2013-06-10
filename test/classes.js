@@ -83,12 +83,22 @@ describe('classes(el)', function(){
       assert(0 == ret.length);
     })
 
-    it('should handle leading spaces correctly', function(){
+    it('should ignore leading whitespace', function(){
       el.className = '  foo bar baz';
       var ret = classes(el).array();
       assert('foo' == ret[0]);
       assert('bar' == ret[1]);
       assert('baz' == ret[2]);
+      assert(3 == ret.length);
+    })
+
+    it('should ignore trailing whitespace', function(){
+      el.className = 'foo bar baz     ';
+      var ret = classes(el).array();
+      assert('foo' == ret[0]);
+      assert('bar' == ret[1]);
+      assert('baz' == ret[2]);
+      assert(3 == ret.length);
     })
   })
 
