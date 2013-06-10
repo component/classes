@@ -82,6 +82,14 @@ describe('classes(el)', function(){
       var ret = classes(el).array();
       assert(0 == ret.length);
     })
+
+    it('should handle leading spaces correctly', function(){
+      el.className = '  foo bar baz';
+      var ret = classes(el).array();
+      assert('foo' == ret[0]);
+      assert('bar' == ret[1]);
+      assert('baz' == ret[2]);
+    })
   })
 
   describe('.has(class)', function(){
