@@ -84,7 +84,7 @@ describe('classes(el)', function(){
     })
 
     it('should ignore leading whitespace', function(){
-      el.className = '  foo bar baz';
+      el.className = '  foo bar    baz';
       var ret = classes(el).array();
       assert('foo' == ret[0]);
       assert('bar' == ret[1]);
@@ -93,7 +93,7 @@ describe('classes(el)', function(){
     })
 
     it('should ignore trailing whitespace', function(){
-      el.className = 'foo bar baz     ';
+      el.className = 'foo bar   baz     ';
       var ret = classes(el).array();
       assert('foo' == ret[0]);
       assert('bar' == ret[1]);

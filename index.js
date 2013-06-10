@@ -143,7 +143,8 @@ ClassList.prototype.toggle = function(name){
  */
 
 ClassList.prototype.array = function(){
-  var arr = this.el.className.split(re);
+  var str = this.el.className.replace(/^\s+|\s+$/g, '');
+  var arr = str.split(re);
   if ('' === arr[0]) arr.shift();
   return arr;
 };
