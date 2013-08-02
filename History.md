@@ -1,4 +1,10 @@
 
+1.1.3 / 2013-08-02 
+==================
+
+ * add browser field to map indexof -> indexof-component
+ * throw an Error if no DOM element is given
+
 1.1.2 / 2013-06-10 
 ==================
 
