@@ -6,6 +6,9 @@
   "dependencies": {
     "indexof-component": "component/indexof#0.0.1"
   },
+  "browser": {
+    "indexof": "indexof-component"
+  },
   "component": {
     "scripts": {
       "classes/index.js": "index.js"
