@@ -51,7 +51,7 @@ describe('classes(el)', function(){
     })
   })
 
-  describe('.toggle(class)', function(){
+  describe('.toggle(class, force)', function(){
     describe('when present', function(){
       it('should remove the class', function(){
         el.className = 'foo bar hidden';
@@ -65,6 +65,34 @@ describe('classes(el)', function(){
         el.className = 'foo bar';
         classes(el).toggle('hidden');
         assert('foo bar hidden' == el.className);
+      })
+    })
+
+    describe('when force is true', function(){
+      it('should add the class', function(){
+        el.className = 'foo bar';
+        classes(el).toggle('hidden', true);
+        assert('foo bar hidden' == el.className);
+      })
+
+      it('should not remove the class', function(){
+        el.className = 'foo bar hidden';
+        classes(el).toggle('hidden', true);
+        assert('foo bar hidden' == el.className);
+      })
+    })
+
+    describe('when force is false', function(){
+      it('should remove the class', function(){
+        el.className = 'foo bar hidden';
+        classes(el).toggle('hidden', false);
+        assert('foo bar' == el.className);
+      })
+
+      it('should not add the class', function(){
+        el.className = 'foo bar';
+        classes(el).toggle('hidden', false);
+        assert('foo bar' == el.className);
       })
     })
   })
