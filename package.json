@@ -10,7 +10,7 @@
     "ui"
   ],
   "dependencies": {
-    "indexof-component": "component/indexof#0.0.1"
+    "indexof": "component/indexof#0.0.1"
   },
   "browser": {
     "indexof": "indexof-component"
