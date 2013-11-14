@@ -1,4 +1,10 @@
 
+1.1.4 / 2013-11-14
+==================
+
+  * package: allow any "indexof-component" version
+  * add repository field to `package.json`
+
 1.1.3 / 2013-08-02
 ==================
 
