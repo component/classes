@@ -1,6 +1,10 @@
 
 var classes = require('classes');
 
+function assert(expr, msg) {
+  if (!expr) throw new Error(msg || 'failed');
+}
+
 describe('classes(el)', function(){
   var el;
   beforeEach(function(){

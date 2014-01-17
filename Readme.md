@@ -41,6 +41,15 @@ classes(el)
 
   Return an array of classes.
 
+## Test
+
+```js
+npm i -g component-test
+component install
+component build
+component test browser
+```
+
 ## License
 
   MIT
