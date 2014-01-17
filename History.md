@@ -1,4 +1,10 @@
 
+1.2.0 / 2014-01-16
+==================
+
+  * add `.toggle()` force parameter
+  * change npm package name to `component-classes`
+
 1.1.4 / 2013-11-14
 ==================
 
