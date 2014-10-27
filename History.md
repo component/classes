@@ -1,4 +1,11 @@
 
+1.2.2 / 2014-10-27
+==================
+
+  * bump version to 1.2.2
+  * pin component-indexof to 0.0.3 in package.json
+  * package: add "license" field
+
 1.2.1 / 2014-02-10
 ==================
 
