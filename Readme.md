@@ -43,11 +43,8 @@ classes(el)
 
 ## Test
 
-```js
-npm i -g component-test
-component install
-component build
-component test browser
+```sh
+$ make test
 ```
 
 ## License
