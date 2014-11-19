@@ -1,9 +1,6 @@
 
 var classes = require('classes');
-
-function assert(expr, msg) {
-  if (!expr) throw new Error(msg || 'failed');
-}
+var assert = require('assert');
 
 describe('classes(el)', function(){
   var el;
