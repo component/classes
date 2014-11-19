@@ -1,4 +1,13 @@
 
+1.2.3 / 2014-11-19
+==================
+
+  * index: Improve HTMLElement duck typing
+  * Readme: Display new test command
+  * Makefile: Install and use local component binaries
+  * package: Add component dev deps
+  * test: Use component/assert
+
 1.2.2 / 2014-10-27
 ==================
 
