@@ -164,7 +164,7 @@ ClassList.prototype.toggle = function(name, force){
  */
 
 ClassList.prototype.array = function(){
-  var className = this.el.getAttribute('class') || '';
+  var className = this.el.className;
   var str = className.replace(/^\s+|\s+$/g, '');
   var arr = str.split(re);
   if ('' === arr[0]) arr.shift();
