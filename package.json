@@ -12,9 +12,6 @@
   "dependencies": {
     "component-indexof": "0.0.3"
   },
-  "browser": {
-    "indexof": "component-indexof"
-  },
   "component": {
     "scripts": {
       "classes/index.js": "index.js"
