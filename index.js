@@ -2,7 +2,11 @@
  * Module dependencies.
  */
 
-var index = require('component-indexof');
+try {
+  var index = require('indexof');
+} catch (err) {
+  var index = require('component-indexof');
+}
 
 /**
  * Whitespace regexp.
