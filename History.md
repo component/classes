@@ -1,4 +1,9 @@
 
+1.2.6 / 2016-04-01
+==================
+
+  * fix: properly fix `component-indexof` require (#29, @ockham)
+
 1.2.5 / 2016-02-28
 ==================
 
