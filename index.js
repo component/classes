@@ -2,10 +2,11 @@
  * Module dependencies.
  */
 
+var r = require;
 try {
-  var index = require('indexof');
+  var index = r('indexof');
 } catch (err) {
-  var index = require('component-indexof');
+  var index = r('component-indexof');
 }
 
 /**
